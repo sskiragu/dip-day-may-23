@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import axios from 'axios';
 
 const username = ref('john')
 const email = ref('john@gmail.com')
@@ -8,7 +9,7 @@ const password = ref('john123')
 const signup = async () => {
     console.log(`${username.value} ${email.value} ${password.value}`);
     // Save the value
-    // axios.post('');
+    await axios.post('http://127.0.0.1:8000/api/signup', {username: username.value, email: email.value, password: password.value});
 }
 
 </script>

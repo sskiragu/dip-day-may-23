@@ -1,13 +1,4 @@
 <script setup>
-import { ref } from "vue";
-
-const count = ref(0)
-
-console.log(count);
-
-function increment() {
-  count.value++
-}
 </script>
 
 <template>
@@ -16,14 +7,11 @@ function increment() {
     <RouterLink class="nav-item" to="/about">About</RouterLink>
     <RouterLink class="nav-item" to="">Services</RouterLink>
     <RouterLink class="nav-item" to="">Contact us</RouterLink>
-    <RouterLink class="nav-item" to="">Login</RouterLink>
+    <RouterLink class="nav-item" to="/login">Login</RouterLink>
     <RouterLink class="nav-item" to="/signup">Signup</RouterLink>
   </div>
   <router-view></router-view>
-  <h1>Counter App</h1>
-
-  <button @click="increment">Increment</button>
-  <p>{{ count }}</p>
+  
 </template>
 
 <style scoped>
