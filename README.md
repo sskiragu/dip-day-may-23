@@ -32,4 +32,16 @@ npm run build
 
 ```sh
 npm run lint
+<!-- <template>
+  <v-app>
+    <v-toolbar color="primary">
+      <v-tab to="/">Home</v-tab>
+      <v-tab to="/about">About</v-tab>
+      <v-tab >Services</v-tab>
+      <v-tab to="/login">Login</v-tab>
+      <v-tab to="/signup">Signup</v-tab>
+    </v-toolbar>
+    <router-view/>
+  </v-app>
+</template> -->
 ```

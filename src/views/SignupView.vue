@@ -15,24 +15,45 @@ const signup = async () => {
 </script>
 
 <template>
-    <div class="signup-form">
-        <h1>Signup Here</h1>
-        <form @submit.prevent="signup">
-            <div class="form-group">
-                <input class="form-input" type="text" placeholder="Enter username" v-model="username">
-            </div>
-            <div class="form-group">
-                <input class="form-input" type="email" placeholder="Enter email" v-model="email">
-            </div>
-            <div class="form-group">
-                <input class="form-input" type="password" placeholder="Enter password" v-model="password">
-            </div>
-            <div class="form-group">
-                <input class="form-input" type="submit" value="Signup">
-            </div>
-        </form>
-        <p>{{username}}</p>
-    </div>
+    <v-container>
+        <v-sheet 
+            border="lg"
+            class="mx-auto pa-10" 
+            width="300"
+            rounded>
+            <p class="text-h4 mb-5">Signup here</p>
+            <v-form @submit.prevent="signup">
+                <v-text-field
+                    hint="john"
+                    label="Username"
+                    variant="outlined"
+                    persistent-hint
+                    class="mb-5"
+                    v-model="username">
+                </v-text-field>
+                <v-text-field
+                    hint="john@gmail.com"
+                    label="Email"
+                    variant="outlined"
+                    persistent-hint
+                    class="mb-5"
+                    v-model="email">
+                </v-text-field>
+                <v-text-field
+                    hint="John123^&*"
+                    label="Password"
+                    variant="outlined"
+                    persistent-hint
+                    class="mb-5"
+                    v-model="password">
+                </v-text-field>
+                <v-btn
+                    type="submit"
+                    variant="elevated"
+                    color="blue">Signup</v-btn>
+            </v-form>
+        </v-sheet>
+    </v-container>
 </template>
 
 <style scoped>
